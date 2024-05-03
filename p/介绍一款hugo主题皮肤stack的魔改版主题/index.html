@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="A brief description of Hugo Shortcodes">
+<title>介绍一款Hugo主题皮肤stack的魔改版主题</title>
+
+<link rel='canonical' href='http://localhost:1313/p/%E4%BB%8B%E7%BB%8D%E4%B8%80%E6%AC%BEhugo%E4%B8%BB%E9%A2%98%E7%9A%AE%E8%82%A4stack%E7%9A%84%E9%AD%94%E6%94%B9%E7%89%88%E4%B8%BB%E9%A2%98/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="介绍一款Hugo主题皮肤stack的魔改版主题">
+<meta property='og:description' content="A brief description of Hugo Shortcodes">
+<meta property='og:url' content='http://localhost:1313/p/%E4%BB%8B%E7%BB%8D%E4%B8%80%E6%AC%BEhugo%E4%B8%BB%E9%A2%98%E7%9A%AE%E8%82%A4stack%E7%9A%84%E9%AD%94%E6%94%B9%E7%89%88%E4%B8%BB%E9%A2%98/'>
+<meta property='og:site_name' content='Daniel&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='hugo-theme' /><meta property='article:published_time' content='2024-05-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-05-02T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1313/post/2024/05/res/29759891-0d6660f28f16b73e.png' />
+<meta name="twitter:title" content="介绍一款Hugo主题皮肤stack的魔改版主题">
+<meta name="twitter:description" content="A brief description of Hugo Shortcodes"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/post/2024/05/res/29759891-0d6660f28f16b73e.png' />
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hud99243180eee3efa457a06c784265fab_48398_300x0_resize_box_3.png" width="300"
+                            height="338" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Daniel&#39;s Blog</a></h1>
+            <h2 class="site-description">Your support is greatly appreciated :)</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/sunyouliu'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#使用方式">使用方式</a></li>
+    <li><a href="#魔改内容">魔改内容</a></li>
+    <li><a href="#部分使用说明">部分使用说明</a>
+      <ol>
+        <li><a href="#引用样式短代码">引用样式短代码</a></li>
+        <li><a href="#友情链接使用方式">友情链接使用方式</a></li>
+        <li><a href="#修改页尾信息">修改页尾信息</a></li>
+      </ol>
+    </li>
+    <li><a href="#其他常见修改">其他常见修改</a>
+      <ol>
+        <li><a href="#设置博客头像">设置博客头像</a></li>
+        <li><a href="#删除博客头像">删除博客头像</a></li>
+        <li><a href="#修改博客背景颜色">修改博客背景颜色</a></li>
+        <li><a href="#指定首页分类标签颜色">指定首页分类标签颜色</a></li>
+        <li><a href="#配置各类图标">配置各类图标</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/%E4%BB%8B%E7%BB%8D%E4%B8%80%E6%AC%BEhugo%E4%B8%BB%E9%A2%98%E7%9A%AE%E8%82%A4stack%E7%9A%84%E9%AD%94%E6%94%B9%E7%89%88%E4%B8%BB%E9%A2%98/">
+                
+                    <img src="/post/2024/05/res/29759891-0d6660f28f16b73e.png" loading="lazy" alt="Featured image of post 介绍一款Hugo主题皮肤stack的魔改版主题" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/hugo/" >
+                Hugo
+            </a>
+        
+            <a href="/categories/theme/" >
+                Theme
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E4%BB%8B%E7%BB%8D%E4%B8%80%E6%AC%BEhugo%E4%B8%BB%E9%A2%98%E7%9A%AE%E8%82%A4stack%E7%9A%84%E9%AD%94%E6%94%B9%E7%89%88%E4%B8%BB%E9%A2%98/">介绍一款Hugo主题皮肤stack的魔改版主题</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            A brief description of Hugo Shortcodes
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 02, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><a class="link" href="https://github.com/CaiJimmy/hugo-theme-stack"  target="_blank" rel="noopener"
+    >hugo-theme-stack</a>主题由CaiJimmy创建，在《<a class="link" href="https://www.jianshu.com/p/14d4206f0725"  target="_blank" rel="noopener"
+    >利用Hugo快速构建个人网站</a>》一文中，我们已经介绍使用了，但在这里我们将介绍这个主题的升级版本，对应的仓库地址：<a class="link" href="https://github.com/Mantyke/Hugo-stack-theme-mod"  target="_blank" rel="noopener"
+    >Mantyke/stack-theme-mod</a>，这个仓库是由 <a class="link" href="https://mantyke.icu/"  target="_blank" rel="noopener"
+    >Mantyke</a> 修改的魔改版本，大家有兴趣可以前往主页查看。以下内容转自作者对修改的自述。</p>
+<h2 id="使用方式">使用方式
+</h2><p><strong>从零建立博客</strong>：Fork 仓库到自己账号下，用 Github 注册 Vercel，依次点击 Overview → New Project → import 刚刚 Fork 的仓库，设置<code>FRAMEWORK PRESET</code>为 Hugo → 点击<code>Environment Variables</code>，设置<code>NAME</code>为<code>HUGO_VERSION</code>，<code>Value</code>为<code>Hugo版本号（如0.89.0）</code> → 点击 Add → 点击 Deploy，稍等十来秒即可部署完成。下载仓库到本地后使用 Github Desktop 更新文章。（注，本地预览需安装 Hugo，具体请参照 <a class="link" href="https://mantyke.icu/2021/hugo-build-blog/"  target="_blank" rel="noopener"
+    >Hugo | 一起动手搭建个人博客吧</a>相关内容）</p>
+<p><strong>旧博客更换主题</strong>：不同主题方式不同，推荐只保留原博客的 content 文件夹，迁移到本仓库 content 文件夹后再按情况调整。</p>
+<h2 id="魔改内容">魔改内容
+</h2><ul>
+<li>调整文章页面为三栏显示（代码来自 <a class="link" href="https://github.com/ShadowySpirits/hugo-theme-stack"  target="_blank" rel="noopener"
+    >ShadowySpirits</a>）</li>
+<li>文章按年份分类</li>
+<li>增加文章字数统计与站点总字数、总篇数显示</li>
+<li>修改全站字体为思源宋体</li>
+<li>增加一个引用短代码（短代码来自<a class="link" href="https://guanqr.com/"  target="_blank" rel="noopener"
+    >荷戟独彷徨</a>）</li>
+<li>添加一个友情链接页面并设置为双栏（友情链接代码来自 <a class="link" href="https://bore.vip/archives/3bf3725e/#%E6%B7%BB%E5%8A%A0%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-shortcodes"  target="_blank" rel="noopener"
+    >Bore</a>，双栏代码来自 <a class="link" href="https://tech.randomwaves.space/posts/21-12-08-make-hugo-stack-theme-links-display-in-two-columns/"  target="_blank" rel="noopener"
+    >BB_Roin</a>）</li>
+<li>一系列基于个人美观喜好的 CSS 修改</li>
+<li>右侧栏增加 Categories 小部件</li>
+</ul>
+<h2 id="部分使用说明">部分使用说明
+</h2><h3 id="引用样式短代码">引用样式短代码
+</h3><p>（注：实际使用请补全花括号</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{&lt; quote &gt;}}}
+</span></span><span class="line"><span class="cl">三月，因久旱不雨，苏轼赴郿，祈雨于太白山之上清宫。数日后，虽有微雨，父老以为不足，于是，再陪宋太守亲往祭祷，回程路上，便见道中有云气自山中来，如群马奔突而至车座左右，苏轼一时好奇心起，开笼收云归家，作《攓云篇》。
+</span></span><span class="line"><span class="cl">{&lt; /quote &gt;}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/post/2024/05/res/29759891-0d6660f28f16b73e.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<h3 id="友情链接使用方式">友情链接使用方式
+</h3><p>友链头像放在<code>/assets/link-img</code>，友链数据放在<code>/data/links.json</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[
+</span></span><span class="line"><span class="cl">    {
+</span></span><span class="line"><span class="cl">        &#34;title&#34;: &#34;小球飞鱼&#34;,
+</span></span><span class="line"><span class="cl">        &#34;website&#34;: &#34;https://mantyke.icu/&#34;,
+</span></span><span class="line"><span class="cl">        &#34;image&#34;: &#34;mantyke.png&#34;,
+</span></span><span class="line"><span class="cl">     &#34;description&#34;: &#34;我们会一起遇见鲸鱼吗？&#34;
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">	{
+</span></span><span class="line"><span class="cl">        &#34;title&#34;: &#34;友情链接2&#34;,
+</span></span><span class="line"><span class="cl">        &#34;website&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">        &#34;image&#34;: &#34;&#34;,
+</span></span><span class="line"><span class="cl">     &#34;description&#34;: &#34;&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="修改页尾信息">修改页尾信息
+</h3><p>站点名称及建站时间请修改以下代码</p>
+<p>站点名称及链接：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">#位置：layout/partials/footer/footer.html</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;</span><span class="n">section</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;copyright&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">&amp;</span><span class="n">copy</span><span class="p">;</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="k">if</span> <span class="ow">and</span> <span class="p">(</span><span class="o">.</span><span class="n">Site</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">footer</span><span class="o">.</span><span class="n">since</span><span class="p">)</span> <span class="p">(</span><span class="n">ne</span> <span class="o">.</span><span class="n">Site</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">footer</span><span class="o">.</span><span class="n">since</span> <span class="p">(</span><span class="ne">int</span> <span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">Format</span> <span class="s2">&#34;2006&#34;</span><span class="p">)))</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{{</span> <span class="o">.</span><span class="n">Site</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">footer</span><span class="o">.</span><span class="n">since</span> <span class="p">}}</span> <span class="o">-</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="n">end</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="n">now</span><span class="o">.</span><span class="n">Format</span> <span class="s2">&#34;2006&#34;</span> <span class="p">}}</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&#34;https://stack-theme-mod.vercel.app/&#34;</span><span class="o">&gt;</span><span class="n">Example</span> <span class="n">Site</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="err">·</span><span class="o">&lt;</span><span class="n">i</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;fas fa-bell&#34;</span><span class="o">&gt;&lt;/</span><span class="n">i</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">id</span><span class="o">=</span><span class="s2">&#34;days&#34;</span><span class="o">&gt;</span><span class="mi">0</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="n">Days</span><span class="o">&lt;</span><span class="n">br</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{{</span><span class="o">$</span><span class="k">var</span> <span class="p">:</span><span class="o">=</span>  <span class="o">$</span><span class="n">scratch</span><span class="o">.</span><span class="n">Get</span> <span class="s2">&#34;total&#34;</span><span class="p">}}{{</span><span class="o">$</span><span class="k">var</span> <span class="o">=</span> <span class="n">div</span> <span class="o">$</span><span class="k">var</span> <span class="mf">100.0</span><span class="p">}}{{</span><span class="o">$</span><span class="k">var</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">Ceil</span> <span class="o">$</span><span class="k">var</span><span class="p">}}{{</span><span class="o">$</span><span class="k">var</span> <span class="o">=</span> <span class="n">div</span> <span class="o">$</span><span class="k">var</span> <span class="mf">10.0</span><span class="p">}}</span><span class="err">共书写了</span><span class="p">{{</span><span class="o">$</span><span class="k">var</span><span class="p">}}</span><span class="n">k字</span><span class="err">·共</span> <span class="p">{{</span> <span class="n">len</span> <span class="p">(</span><span class="n">where</span> <span class="o">.</span><span class="n">Site</span><span class="o">.</span><span class="n">RegularPages</span> <span class="s2">&#34;Section&#34;</span> <span class="s2">&#34;post&#34;</span><span class="p">)</span> <span class="p">}}</span><span class="err">篇文章</span><span class="o">&lt;/</span><span class="n">br</span><span class="o">&gt;&lt;</span><span class="n">span</span><span class="o">&gt;&lt;</span><span class="n">p</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">#位置：layout/partials/footer/footer.html</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">s1</span> <span class="o">=</span> <span class="s1">&#39;2022-02-13&#39;</span><span class="p">;</span><span class="o">//</span><span class="err">设置为建站时间</span>
+</span></span><span class="line"><span class="cl"><span class="n">s1</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">(</span><span class="n">s1</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="o">/-/</span><span class="n">g</span><span class="p">,</span> <span class="s2">&#34;/&#34;</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="n">s2</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Date</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">days</span> <span class="o">=</span> <span class="n">s2</span><span class="o">.</span><span class="n">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="n">s1</span><span class="o">.</span><span class="n">getTime</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">number_of_days</span> <span class="o">=</span> <span class="n">parseInt</span><span class="p">(</span><span class="n">days</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span><span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="n">document</span><span class="o">.</span><span class="n">getElementById</span><span class="p">(</span><span class="s1">&#39;days&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">innerHTML</span> <span class="o">=</span> <span class="n">number_of_days</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="其他常见修改">其他常见修改
+</h2><h3 id="设置博客头像">设置博客头像
+</h3><p>位置：<code>/assets/img</code>，请将头像命名为<code>avatar.png</code>，替换原头像文件</p>
+<h3 id="删除博客头像">删除博客头像
+</h3><p>位置：<code>/layouts/partials/sidebar/left.html</code>，注释或删去以下部分：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl">        <span class="p">{{</span> <span class="n">with</span> <span class="o">.</span><span class="n">Site</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">avatar</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{{</span> <span class="k">if</span> <span class="p">(</span><span class="n">default</span> <span class="bp">true</span> <span class="o">.</span><span class="n">enabled</span><span class="p">)</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;</span><span class="n">figure</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;site-avatar&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s2">&#34;{{ .Site.BaseURL | relLangURL }}&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{{</span> <span class="k">if</span> <span class="ow">not</span> <span class="o">.</span><span class="n">local</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s2">&#34;{{ .src }}&#34;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&#34;300&#34;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&#34;300&#34;</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;site-logo&#34;</span> <span class="n">loading</span><span class="o">=</span><span class="s2">&#34;lazy&#34;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&#34;Avatar&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{{</span> <span class="k">else</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{{</span> <span class="o">$</span><span class="n">avatar</span> <span class="p">:</span><span class="o">=</span> <span class="n">resources</span><span class="o">.</span><span class="n">Get</span> <span class="p">(</span><span class="o">.</span><span class="n">src</span><span class="p">)</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                    <span class="p">{{</span> <span class="k">if</span> <span class="o">$</span><span class="n">avatar</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">{{</span> <span class="o">$</span><span class="n">avatarResized</span> <span class="p">:</span><span class="o">=</span> <span class="o">$</span><span class="n">avatar</span><span class="o">.</span><span class="n">Resize</span> <span class="s2">&#34;300x&#34;</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                        <span class="o">&lt;</span><span class="n">img</span> <span class="n">src</span><span class="o">=</span><span class="s2">&#34;{{ $avatarResized.RelPermalink }}&#34;</span> <span class="n">width</span><span class="o">=</span><span class="s2">&#34;{{ $avatarResized.Width }}&#34;</span>
+</span></span><span class="line"><span class="cl">                            <span class="n">height</span><span class="o">=</span><span class="s2">&#34;{{ $avatarResized.Height }}&#34;</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;site-logo&#34;</span> <span class="n">loading</span><span class="o">=</span><span class="s2">&#34;lazy&#34;</span> <span class="n">alt</span><span class="o">=</span><span class="s2">&#34;Avatar&#34;</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{{</span> <span class="k">else</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                        <span class="p">{{</span> <span class="n">errorf</span> <span class="s2">&#34;Failed loading avatar from %q&#34;</span> <span class="o">.</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{{</span> <span class="n">end</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{{</span> <span class="n">end</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                <span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{{</span> <span class="n">with</span> <span class="o">$.</span><span class="n">Site</span><span class="o">.</span><span class="n">Params</span><span class="o">.</span><span class="n">sidebar</span><span class="o">.</span><span class="n">emoji</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">                    <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">&#34;emoji&#34;</span><span class="o">&gt;</span><span class="p">{{</span> <span class="o">.</span> <span class="p">}}</span><span class="o">&lt;/</span><span class="n">span</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{{</span> <span class="n">end</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">            <span class="o">&lt;/</span><span class="n">figure</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{{</span> <span class="n">end</span> <span class="p">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{{</span> <span class="n">end</span> <span class="p">}}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="修改博客背景颜色">修改博客背景颜色
+</h3><p>位置：<code>assets\scss\variables.scss</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--body-background: #f6f6f6;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="指定首页分类标签颜色">指定首页分类标签颜色
+</h3><p>位置：<code>content\categories</code>，创建分类同名文件夹后，在文件夹内创建<code>_index.md</code>文件，写入 frontmatter</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">title: &#34;做猫贵在折腾&#34; //分类名称
+</span></span><span class="line"><span class="cl">description: &#34;简介 Blablabla&#34; //不需要可以删了
+</span></span><span class="line"><span class="cl">image: &#34;ffxiv_20210830_230509_817.png&#34; //分类题图，不需要也可以删了
+</span></span><span class="line"><span class="cl">style:
+</span></span><span class="line"><span class="cl">    background: &#34;#80aba9&#34; //分类标签底色
+</span></span><span class="line"><span class="cl">    color: &#34;#fff&#34;
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="配置各类图标">配置各类图标
+</h3><p>图标放在：<code>/assets/icons</code>，svg 格式，配置方式参考<a class="link" href="https://docs.stack.jimmycai.com/zh/configuration/custom-menu"  target="_blank" rel="noopener"
+    >文档</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/hugo-theme/">Hugo-Theme</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/%E5%80%9Fgithub-pages%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">借Github Pages发布自己的个人网站</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%88%A9%E7%94%A8hugo-stack%E5%BF%AB%E9%80%9F%E6%9E%84%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/post/2024/05/res/29759891-d352f53031a984ef.png" loading="lazy" data-key="" data-hash="/post/2024/05/res/29759891-d352f53031a984ef.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">利用Hugo&#43;Stack快速构建个人网站</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/hugo%E5%88%9D%E4%BD%93%E9%AA%8C/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo初体验</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/hugo%E6%9E%84%E5%BB%BA%E9%94%99%E8%AF%AF/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Hugo构建错误</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2024 Daniel
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

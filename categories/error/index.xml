@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Error on Daniel&#39;s Blog</title>
+        <link>http://localhost:1313/categories/error/</link>
+        <description>Recent content in Error on Daniel&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Daniel</copyright>
+        <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/error/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Hugo构建错误</title>
+        <link>http://localhost:1313/p/hugo%E6%9E%84%E5%BB%BA%E9%94%99%E8%AF%AF/</link>
+        <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/hugo%E6%9E%84%E5%BB%BA%E9%94%99%E8%AF%AF/</guid>
+        <description>&lt;p&gt;在Hugo中安装主题时，你可能会遇到的一个错误&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; Error: Error building site: TOCSS: failed to transform &lt;span class=&#34;s2&#34;&gt;&amp;#34;scss/style.scss&amp;#34;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;text/x-scss&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;. Check your Hugo installation&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; you need the extended version to build SCSS/SASS. 6:06:59 PM: Total in &lt;span class=&#34;m&#34;&gt;5416&lt;/span&gt; ms 6:06:59 PM:
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;这个问题的原因在于该主题用到scss，而你只需要下载hugo的extended版本即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;进入&lt;a class=&#34;link&#34; href=&#34;https://gohugo.io/installation/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hugo官方安装教程&lt;/a&gt;，找到&lt;code&gt;Prebuilt binaries&lt;/code&gt;章节，访问&lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/releases/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;最新版本&lt;/a&gt;找到对应操作系统的extended版本，替换原来安装的hugo binary文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有意思的是，之前在发现这个问题时，我是通过安装&lt;code&gt;brew install sass/sass/sass&lt;/code&gt;来解决问题的，但显然上述方案更加简洁方便。本地安装sass，需要依赖dart、buf，如果一口气安装不来，可以分开安装&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;如果有帮助到你，或是给你启发，解决了你的问题，请帮忙点个赞👍，让更多的人看到&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
