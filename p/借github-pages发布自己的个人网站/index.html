@@ -14,7 +14,25 @@
 <meta name="twitter:title" content="借Github Pages发布自己的个人网站">
 <meta name="twitter:description" content="在前面快速构建个人网站文章中，我们已经介绍了如何借助Hugo搭建好自己的博客站点，但只能在本地访问，不能被互联网访问。你可以选择在自己的vps上部署。如果你没有自己的vps，那可以薅下Github的羊毛； 下面我们介绍如何借助GitHub Pages把本地博客的public文件夹内容发布到GitHub上，从而实现互联网访问。 首先在GitHub上创建一个新的Respository，命名为：.github.io，其中是你的GitHub的用户名。可见属性必须选择Public，否则会出现404 Not Found错误。 把本地博客的public目录下的内容push到GitHub上刚新建的.github.io仓库中 1 2 3 4 5 6 7 $ cd public $ git init $ git add * $ git commit -m &#39;new blog&#39; $ git branch -M main $ git remote add origin https://github.com/sunyouliu/sunyouliu.github.io.git $ git push -u origin main 如果一切顺利，public文件夹下的内容就被推送到GitHub上的.github.io这个仓库 访问 https://.github.io 以查看新网站。请注意，对站点的更改在推送到 GitHub 后，最长可能需要 10 分钟才会发布。所以耐心等待几分钟，就可以通过https://.github.io/ 访问你的博客了。 注意1 新建的仓库，可见属性必须选择Public。当然，如果你设置错误也是有办法修改，并重新部署的；如果你嫌麻烦，可以重建仓库，重做上述步骤；下面我将演示如何修改 首先你需要做的是修改仓库的可见属性为Public。这个操作在仓库Settings-&gt;General页面滚动到底部Danger Zone中找到Change repository visibility，将其修改为public。如果你未处理该步骤，你会看到如下提示： 在边栏选择&quot;Code and automation&quot;栏目，点击Pages，在页面中选择对应的Branch作为发布源 按上面的git命令操作，你们应该选择main 分支作为发布源。下面截图是我的环境，请忽略。 当你选择save后，可以稍稍等待一会，当一切部署正常后，在上图我们看到，它列出了我们站点部署的地址，如此就使用Github Pages访问我们的站点了 推荐阅读 https://docs.">
   
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CNBX5VQQDV"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CNBX5VQQDV');
+        }
+      </script>
+    
+  
 
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </head>
     <body class="
@@ -310,24 +328,6 @@
                 </time>
             </div>
         
-        
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="12" cy="12" r="9" />
-  <polyline points="12 7 12 12 15 15" />
-</svg>
-
-
-
-                <time class="article-words">
-                    71字
-                </time>
-            </div>
-        
-    
-        
-        
     </footer>
     
 
@@ -601,8 +601,14 @@
             2023 - 
         
         2024 Daniel
-        
-    
+    <div class="busuanzi-footer">
+        <span id="busuanzi_container_site_pv">
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次
+        </span>
+        <span id="busuanzi_container_site_uv">
+            本站访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>
+    </div>
     </section>
     
     <section class="powerby">
