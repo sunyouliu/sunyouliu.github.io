@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>GitHub Pages on Daniel&#39;s Blog</title>
-        <link>http://localhost:1313/tags/github-pages/</link>
-        <description>Recent content in GitHub Pages on Daniel&#39;s Blog</description>
+        <title>Utterances on Daniel&#39;s Blog</title>
+        <link>http://localhost:1313/tags/utterances/</link>
+        <description>Recent content in Utterances on Daniel&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Daniel</copyright>
-        <lastBuildDate>Sat, 04 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/github-pages/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 04 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/utterances/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>为Hugo构建的博客站点添加评论组件</title>
         <link>http://localhost:1313/p/%E4%B8%BAhugo%E6%9E%84%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%AB%99%E7%82%B9%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E7%BB%84%E4%BB%B6/</link>
         <pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate>
@@ -109,95 +109,6 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;这样博客文章就成功添加评论功能，和读者亲密互动！&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;如果有帮助到你，或是给你启发，解决了你的问题，请帮忙点个赞👍，让更多的人看到&lt;/code&gt;&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>借Github Pages发布自己的个人网站</title>
-        <link>http://localhost:1313/p/%E5%80%9Fgithub-pages%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
-        <pubDate>Fri, 03 May 2024 00:00:00 +0000</pubDate>
-        
-        <guid>http://localhost:1313/p/%E5%80%9Fgithub-pages%E5%8F%91%E5%B8%83%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
-        <description>&lt;p&gt;在前面快速构建个人网站文章中，我们已经介绍了如何借助&lt;code&gt;Hugo&lt;/code&gt;搭建好自己的博客站点，但只能在本地访问，不能被互联网访问。你可以选择在自己的vps上部署。如果你没有自己的vps，那可以薅下Github的羊毛；&lt;/p&gt;
-&lt;p&gt;下面我们介绍如何借助GitHub Pages把本地博客的public文件夹内容发布到GitHub上，从而实现互联网访问。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;首先在GitHub上创建一个新的Respository，命名为：&lt;username&gt;.github.io，其中&lt;username&gt;是你的GitHub的用户名。可见属性必须选择Public，否则会出现404 Not Found错误。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;把本地博客的public目录下的内容push到GitHub上刚新建的&lt;username&gt;.github.io仓库中&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; public
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git init
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git add *
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git commit -m &lt;span class=&#34;s1&#34;&gt;&amp;#39;new blog&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git branch -M main
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git remote add origin https://github.com/sunyouliu/sunyouliu.github.io.git
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git push -u origin main
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如果一切顺利，public文件夹下的内容就被推送到GitHub上的&lt;username&gt;.github.io这个仓库&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;访问 https://&lt;username&gt;.github.io 以查看新网站。请注意，对站点的更改在推送到 GitHub 后，最长可能需要 10 分钟才会发布。所以耐心等待几分钟，就可以通过https://&lt;username&gt;.github.io/ 访问你的博客了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;注意1
-新建的仓库，可见属性必须选择Public。当然，如果你设置错误也是有办法修改，并重新部署的；如果你嫌麻烦，可以重建仓库，重做上述步骤；下面我将演示如何修改&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;首先你需要做的是修改仓库的可见属性为Public。这个操作在仓库Settings-&amp;gt;General页面滚动到底部Danger Zone中找到Change repository visibility，将其修改为public。如果你未处理该步骤，你会看到如下提示：
-&lt;img src=&#34;http://localhost:1313/post/2024/05/res/29759891-a5a425d930930169.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在边栏选择&amp;quot;Code and automation&amp;quot;栏目，点击Pages，在页面中选择对应的Branch作为发布源
-&lt;img src=&#34;http://localhost:1313/post/2024/05/res/1714745245719.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;按上面的git命令操作，你们应该选择&lt;code&gt;main &lt;/code&gt;分支作为发布源。下面截图是我的环境，请忽略。
-&lt;img src=&#34;http://localhost:1313/post/2024/05/res/1714745364442.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&#34;
-	
-	
-	
-	loading=&#34;lazy&#34;
-	
-	
-&gt;
-当你选择save后，可以稍稍等待一会，当一切部署正常后，在上图我们看到，它列出了我们站点部署的地址，如此就使用Github Pages访问我们的站点了&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;推荐阅读
-&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/zh/pages/quickstart&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://docs.github.com/zh/pages/quickstart&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 </description>
         </item>
         
